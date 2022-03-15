@@ -1,7 +1,6 @@
 import './App.css';
 import { useState } from 'react'
 import Students from './Students';
-import { Card } from 'bootstrap';
 
 function App() {
   const [students, setStudents] = useState([
