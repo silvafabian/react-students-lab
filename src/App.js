@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react'
 import Students from './Students';
+import { Card } from 'bootstrap';
 
 function App() {
   const [students, setStudents] = useState([
@@ -65,7 +66,7 @@ function App() {
   ])
 
   return (
-    <div>
+    <div className='students'>
       {students.map((student, idx) => 
         <Students 
           key={idx} 

@@ -1,17 +1,24 @@
 import Scores from "./Scores";
+import { Card } from 'react-bootstrap'
 
 const Students = (props) => {
 
   return (
-    <>
-      <div>
-        <h2>Name: {props.student.name}</h2>
-        <h4>Bio: {props.student.bio}</h4>
-      </div>
-      {props.student.scores.map(card =>
-        <Scores key={card} card={card} />
-      )}
-    </>
+    <Card style={{ width: '40rem' }}>
+      <Card.Body>
+        <Card.Title as="h2">
+          Name: {props.student.name}
+        </Card.Title>
+
+        <Card.Text as="p">
+          Bio: {props.student.bio}
+        </Card.Text>
+
+        {props.student.scores.map(card =>
+          <Scores key={card} card={card} />
+        )}
+      </Card.Body>
+    </Card>
   );
 }
 
